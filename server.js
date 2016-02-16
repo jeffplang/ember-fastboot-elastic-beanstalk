@@ -78,7 +78,7 @@ function downloadAppZip() {
 // Unzip `fastboot-dist.zip`
 function unzipApp() {
   log("Trying unzip", ZIP_PATH);
-  return execAndPrint('unzip ' + ZIP_PATH)
+  return execAndPrint('unzip -o ' + ZIP_PATH)
     .then(function() {
       log("Unzipped " + ZIP_PATH);
     });
@@ -169,7 +169,6 @@ function log() {
 }
 
 function execAndPrint() {
-  log(arguments);
   return exec.apply(null, arguments)
     .then(function(stdout, stderr) {
       log(stdout);
