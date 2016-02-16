@@ -125,7 +125,9 @@ function startServer() {
 }
 
 function findAppFile() {
-  return findFile("app", path.join(OUTPUT_PATH, "assets", APP_NAME + "*.js"));
+  var file = findFile("app", path.join(OUTPUT_PATH, "assets", APP_NAME + "*.js"));
+  log('findAppFile:', file);
+  return file;
 }
 
 function findVendorFile() {
