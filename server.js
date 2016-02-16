@@ -101,6 +101,7 @@ function startServer() {
       });
     } else {
       var server = new FastBootServer({
+        distPath: OUTPUT_PATH,
         appFile: findAppFile(),
         vendorFile: findVendorFile(),
         htmlFile: findHTMLFile(),
