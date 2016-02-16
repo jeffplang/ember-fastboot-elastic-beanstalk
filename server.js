@@ -77,6 +77,7 @@ function downloadAppZip() {
 
 // Unzip `fastboot-dist.zip`
 function unzipApp() {
+  log("Trying unzip", ZIP_PATH);
   return execAndPrint('unzip ' + ZIP_PATH)
     .then(function() {
       log("Unzipped " + ZIP_PATH);
