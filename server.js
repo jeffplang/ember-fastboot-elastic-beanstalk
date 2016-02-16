@@ -169,6 +169,7 @@ function log() {
 }
 
 function execAndPrint() {
+  log(arguments);
   return exec.apply(null, arguments)
     .then(function(stdout, stderr) {
       log(stdout);
